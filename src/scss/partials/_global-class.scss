@@ -2,17 +2,18 @@ body {
   background-color: $bg-color;
 }
 
+.table__header {
+  width: 100%;
+  @include font($font, $table-header-color, 400, 18px);
+}
+
 .table {
   max-width: 640px;
-  margin: 0 auto;
-  .table__header {
-    width: 100%;
-    padding: 0 15px;
-    @include font($font, $table-header-color, 400, 18px);
-  }
+  margin: 20px auto;
+
   .table__body {
     width: 100%;
-    height: 314px;
+    max-height: 314px;
     overflow-y: scroll;
     overflow-x: visible;
     @include font($font, $table-body-color, 400, 14px);
@@ -20,34 +21,47 @@ body {
       height: 40px;
       border-bottom: 1px solid $table-body-row-color;
       background-color: $table-body-bg-color;
-      @include padding(null, 15px, null, 15px);
       @include transition(all,2s,ease);
-      &:hover {
-        background-color: $table-hover-bg-color;
-        padding: 0;
-        margin-left: 0;
+      &.click {
+        .table__column--delete {
+          background-color: $table-hover-bg-color;
+          .delete-icon {
+            margin-right: 20px;
+            background-image: none;
+          }
+        }
+      }
+      &.hover {
         .table__column--delete {
           background-color: $delete-bg-color;
-          @include font($font, white, 500, 14px);
-          .hidden {
-            display: block;
-            padding-left: 3px;
-          }
           .delete-icon {
             margin-right: 20px;
             background-image: url("../assets/icons/delete-white.png");
           }
+          .delete-description {
+            display: block;
+            padding-left: 3px;
+          }
+        }
+      }
+      &.hover, &.click {
+        background-color: $table-hover-bg-color;
+        padding: 0;
+        margin-left: 0;
+        .table__column--delete {
+          @include font($font, white, 500, 14px);
         }
       }
     }
   }
 }
 
-.table__row {
-  margin-left: 12px;
+.table__row, .confirm, .table__row--border {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @include margin(null, 12px, null, 12px);
+  @include padding(null, 15px, null, 15px);
 }
 
 .table__row--border {
@@ -74,10 +88,10 @@ body {
     @include transition(all,2s,ease);
     cursor: pointer;
     justify-content: flex-end;
-    .hidden {
+    @include font($font, $table-body-color, 500, 14px);
+    .delete-description {
       display: none;
     }
-    @include font($font, $table-body-color, 500, 14px);
     .delete-icon {
       width: 15px;
       height: 19px;
@@ -86,6 +100,49 @@ body {
       @include background-center;
       background-image: url("../assets/icons/delete-red.png");
     }
+  }
+}
+
+.confirm {
+  border-bottom: 1px solid $table-body-row-color;
+  background-color: $table-body-bg-color;
+  height: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  @include font($font, $table-body-color, 400, 12px);
+  .centered {
+    display: flex;
+    height: 30px;
+    width: 100%;
+  }
+  .table__column {
+    margin: 1px;
+    background-color: $table-body-row-confirm-color;
+  }
+  .confirm__message {
+    @include border-radius(null, null, null, 4px);
+  }
+  .confirm__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .confirm__button--yes {
+    background-color: $confirm-color;
+    @include border-radius(null, null, 4px, null);
+  }
+}
+
+.confirm--last {
+  align-items: flex-end;
+  .confirm__message {
+    @include border-radius(4px, null, null, 0);
+  }
+  .confirm__button--yes {
+    background-color: $confirm-color;
+    @include border-radius(null, 4px, 0, null);
   }
 }
 
@@ -101,6 +158,9 @@ body {
   }
   ._8 {
     flex: 8;
+  }
+  ._18 {
+    flex: 18;
   }
   ._24 {
     flex: 24;
