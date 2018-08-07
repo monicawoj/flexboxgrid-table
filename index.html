@@ -2,89 +2,163 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zapakujloremipsum.com</title>
+    <title>Responsive Table</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+    <script src="dist/js/app.js"></script>
 </head>
 
 <body>
-    <div class="page">
-        <header class="header container">
-            <div class="header-logo">
-                <a href="/" class="header-logo-link">
-                    <div class="header-logo-image"></div>
-                    <h1>Zapakujloremipsum.com</h1>
-                </a>
+
+<div class="table">
+    <div class="table__header">
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Name</p>
             </div>
-            <div class="header-nav">
-                <nav>
-                    <ul class="header-nav-list">
-                        <li><a href="">procesy</a></li>
-                        <li><a href="">usługi</a></li>
-                        <li><a href="">kontakt</a></li>
-                    </ul>
-                </nav>
+            <div class="table__column _6">
+                <p>Age</p>
             </div>
-        </header>
-        <section class="contact-me container">
-            <div class="contact-me-visual">
-                <div class="image"></div>
-                <div class="overlay"></div>
+            <div class="table__column _6">
+                <p>Zodiac</p>
             </div>
-            <div class="contact-me-form">
-                <div class="form-holder">
-                    <h2>Napisz do mnie</h2>
-                    <form>
-                        <div class="form-field-row">
-                            <div class="form-field">
-                                <label for="contact-me-email">Email</label>
-                                <input type="email" placeholder="Podaj email" class="error" id="contact-me-email">
-                            </div>
-                            <div class="form-field">
-                                <label for="contact-me-name">Imię</label>
-                                <input type="text" placeholder="Podaj imię" class="valid" value="Aleksander Wielki" id="contact-me-name">
-                            </div>
-                        </div>
-                        <div class="form-field-row">
-                            <div class="form-field">
-                                <label for="contact-me-message">Wiadomość</label>
-                                <textarea placeholder="How can we help?" id="contact-me-message">Uchylone drzwi wpłynął do wielkiej, który ciągnął się pancerz zewnętrzny od pożaru. Powietrze było ich do kieszeni, wygonić znajdującą się nieoczekiwanie fortuny, kiedy je odczytywać z aparatu w każdej z świętych trajektometr, sobie epokach, na sprężynującej desce, zawieszony zostałoby mu pół korony. Wskazują okrwawionym też z piętnaście sprawie własną przed sklepem na Dyerhoffa Niepokalany, bo na wpół domyślny był to tylko unieruchomiło. Chyba zimno. Butami? Zaszła nieodwołalnie za. Uchylone drzwi wpłynął do wielkiej, który ciągnął się pancerz zewnętrzny od pożaru. Powietrze było ich do kieszeni, wygonić znajdującą się nieoczekiwanie fortuny, kiedy je odczytywać z aparatu w każdej z świętych trajektometr, sobie epokach, na sprężynującej desce, zawieszony zostałoby mu pół korony. Wskazują okrwawionym też z piętnaście sprawie własną przed sklepem na Dyerhoffa Niepokalany, bo na wpół domyślny był to tylko unieruchomiło. Chyba zimno. Butami? Zaszła nieodwołalnie za.
-                                </textarea>
-                            </div>
-                        </div>
-                        <div class="form-field-row">
-                            <div class="form-submit">
-                                <input type="submit" value="Napisz do mnie">
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="table__column _4">
+                <p>Action</p>
             </div>
-        </section>
-        <section class="sign-up container">
-            <div class="form-holder">
-                <h3>Dodaj swój email do bazy</h3>
-                <form>
-                    <div class="form-field-row">
-                        <div class="form-field">
-                            <div class="user-icon icon"></div>
-                            <input type="text" placeholder="Imię" id="sign-up-name">
-                        </div>
-                        <div class="form-field">
-                            <div class="email-icon icon"></div>
-                            <input type="email" placeholder="E-mail" id="sign-up-email">
-                        </div>
-                    </div>
-                    <div class="form-field-row">
-                        <div class="form-submit">
-                            <input type="submit" value="Zapisz mnie">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
+        </div>
     </div>
+    <div class="table__row table__row--border">
+        <div class="table__column _24"></div>
+    </div>
+    <div class="table__body">
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Lorem Ipsum</p>
+            </div>
+            <div class="table__column _6">
+                <p>12</p>
+            </div>
+            <div class="table__column _6">
+                <p>Gemini</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Dolor sit</p>
+            </div>
+            <div class="table__column _6">
+                <p>15</p>
+            </div>
+            <div class="table__column _6">
+                <p>Scorpio</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Consectetur Adipisicing</p>
+            </div>
+            <div class="table__column _6">
+                <p>65</p>
+            </div>
+            <div class="table__column _6">
+                <p>Sagitarius</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Dolor sit</p>
+            </div>
+            <div class="table__column _6">
+                <p>31</p>
+            </div>
+            <div class="table__column _6">
+                <p>Scorpio</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Voluptatem Accusantium</p>
+            </div>
+            <div class="table__column _6">
+                <p>44</p>
+            </div>
+            <div class="table__column _6">
+                <p>Gemini</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Consectetur Adipisicing</p>
+            </div>
+            <div class="table__column _6">
+                <p>12</p>
+            </div>
+            <div class="table__column _6">
+                <p>Cancer</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Dolor sit</p>
+            </div>
+            <div class="table__column _6">
+                <p>31</p>
+            </div>
+            <div class="table__column _6">
+                <p>Scorpio</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__column _8">
+                <p>Lorem Ipsum</p>
+            </div>
+            <div class="table__column _6">
+                <p>72</p>
+            </div>
+            <div class="table__column _6">
+                <p>Gemini</p>
+            </div>
+            <div class="table__column table__column--delete _4">
+                <p class="hidden">DELETE</p>
+                <div class="delete-icon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="table__row table__row--border">
+        <div class="table__column _24"></div>
+    </div>
+</div>
+
+
 </body>
 
 </html>

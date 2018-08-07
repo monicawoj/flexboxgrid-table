@@ -1,1 +1,5 @@
-//blank placeholder file for when the landing page / forms require functionality
+document.querySelectorAll('.table__column--delete').forEach(btn => {
+   btn.addEventListener('click', () => {
+      console.log(this);
+   });
+});

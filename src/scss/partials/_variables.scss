@@ -1,21 +1,17 @@
 //Colors
-$green: rgba(0, 255, 93, 0.49);
-$white: #ffffff;
-$black: #000000;
-$red: #ea1f41;
-$blue: #20b7fa;
-$teal: #20ebdd;
-$grey: rgba(112, 112, 112, 0.25);
-$gradient: linear-gradient(180deg, $blue 0%, $teal 100%);
+$bg-color: #233040;
+$table-header-color: #526980;
+$table-hover-bg-color: #3F5A76;
+$table-body-color: #8E9AA8;
+$table-body-bg-color: #192533;
+$delete-bg-color: rgb( 244, 59, 59 );
+$table-body-row-color: #111D29;
 
 //Fonts
-$sans: 'Open Sans', sans-serif;
-$mont: 'Montserrat', sans-serif;
+$font: 'Rubik', sans-serif;
 
-//Sizing
-$pageWidth: 1920px;
-$pageHeight: calc(752px + 1081px);
+//Sixing
+$cols: 24;
 
 //Breakpoints
-$sm: 700px;
-$lg: 1695px;
+$med: 800px;
