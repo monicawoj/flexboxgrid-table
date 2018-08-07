@@ -1,0 +1,21 @@
+//Colors
+$green: rgba(0, 255, 93, 0.49);
+$white: #ffffff;
+$black: #000000;
+$red: #ea1f41;
+$blue: #20b7fa;
+$teal: #20ebdd;
+$grey: rgba(112, 112, 112, 0.25);
+$gradient: linear-gradient(180deg, $blue 0%, $teal 100%);
+
+//Fonts
+$sans: 'Open Sans', sans-serif;
+$mont: 'Montserrat', sans-serif;
+
+//Sizing
+$pageWidth: 1920px;
+$pageHeight: calc(752px + 1081px);
+
+//Breakpoints
+$sm: 700px;
+$lg: 1695px;
