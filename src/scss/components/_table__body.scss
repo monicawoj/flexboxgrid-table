@@ -1,0 +1,11 @@
+@import './_table__column.scss';
+@import './_table__row.scss';
+@import './_table__row--confirm.scss';
+
+.table__body {
+  width: 100%;
+  max-height: 314px;
+  overflow-y: scroll;
+  overflow-x: visible;
+  @include font($font, $table-body-color, 400, 14px);
+}

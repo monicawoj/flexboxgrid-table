@@ -1,0 +1,26 @@
+.table__column {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 15px;
+  flex: 1;
+  &.table__column--delete {
+    @include transition(all,2s,ease);
+    cursor: pointer;
+    justify-content: flex-end;
+    @include font($font, $table-body-color, 500, 14px);
+    .delete-description {
+      display: none;
+    }
+    .delete-icon {
+      width: 15px;
+      height: 19px;
+      margin-right: 8px;
+      margin-left: 8px;
+      @include background-center;
+      background-image: url("../assets/icons/delete-red.png");
+    }
+  }
+}

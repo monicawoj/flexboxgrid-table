@@ -1,0 +1,12 @@
+.table__border {
+  height: 4px;
+  background-color: $table-body-bg-color;
+  @include border-radius(4px, 4px, null, null);
+  margin-bottom: 2px;
+  margin-top: 15px;
+  &:last-of-type {
+    @include border-radius(null, null, 4px, 4px);
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,4 @@
+.table__header {
+  width: 100%;
+  @include font($font, $table-header-color, 400, 18px);
+}

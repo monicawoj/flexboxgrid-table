@@ -89,3 +89,21 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/*Flex grid for $cols amount of columns, $size used for media query break points*/
+@mixin flex-grid($small, $med) {
+  @media screen and (min-width: $small) {
+    @for $i from 1 through $cols {
+      .small_#{$i} {
+        flex: $i;
+      }
+    }
+  }
+  @media screen and (min-width: $med) {
+    @for $i from 1 through $cols {
+      .med_#{$i} {
+        flex: $i;
+      }
+    }
+  }
+}

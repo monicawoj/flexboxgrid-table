@@ -1,0 +1,45 @@
+.table__row--confirm {
+  border-bottom: 1px solid $table-body-row-color;
+  background-color: $table-body-bg-color;
+  align-items: flex-start;
+  justify-content: center;
+  height: 80px;
+  @media screen and (min-width: $small) {
+    height: 40px;
+  }
+  @include font($font, $table-body-color, 400, 12px);
+  .centered {
+    display: flex;
+    height: 75%;
+    width: 100%;
+  }
+  .table__column {
+    margin: 1px;
+    background-color: $table-body-row-confirm-color;
+  }
+  .confirm__message {
+    @include border-radius(null, null, null, 4px);
+  }
+  .confirm__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .confirm__button--yes {
+    background-color: $confirm-color;
+    @include border-radius(null, null, 4px, null);
+  }
+}
+
+.table__row--confirm--last {
+  align-items: flex-end;
+  .confirm__message {
+    @include border-radius(4px, null, null, 0);
+  }
+  .confirm__button--yes {
+    background-color: $confirm-color;
+    @include border-radius(null, 4px, 0, null);
+  }
+}

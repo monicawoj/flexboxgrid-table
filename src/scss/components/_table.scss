@@ -1,0 +1,18 @@
+@import './_table__header.scss';
+@import './_table__border.scss';
+@import './_table__body.scss';
+
+.table {
+  max-width: 640px;
+  margin: 20px auto;
+}
+
+.table__row, .confirm, .table__border {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include margin(null, 12px, null, 12px);
+  @include padding(null, 15px, null, 15px);
+}
+
+@include flex-grid($small, $med);

@@ -1,0 +1,41 @@
+.table__body {
+  .table__row {
+    border-bottom: 1px solid $table-body-row-color;
+    background-color: $table-body-bg-color;
+    height: 80px;
+    @media screen and (min-width: $small) {
+      height: 40px;
+    }
+    @include transition(all,2s,ease);
+    &.hover, &.click {
+      background-color: $table-hover-bg-color;
+      padding: 0;
+      margin-left: 0;
+      .table__column--delete {
+        @include font($font, white, 500, 14px);
+      }
+    }
+    &.click {
+      .table__column--delete {
+        background-color: $table-hover-bg-color;
+        .delete-icon {
+          margin-right: 20px;
+          background-image: none;
+        }
+      }
+    }
+    &.hover {
+      .table__column--delete {
+        background-color: $delete-bg-color;
+        .delete-icon {
+          margin-right: 20px;
+          background-image: url("../assets/icons/delete-white.png");
+        }
+        .delete-description {
+          display: block;
+          padding-left: 3px;
+        }
+      }
+    }
+  }
+}

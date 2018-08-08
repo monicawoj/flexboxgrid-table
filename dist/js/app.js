@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         btn.addEventListener('click', () => {
             let newRow=document.createElement("div");
             if([...myRow.classList].indexOf('table__row--last') < 0){
-                newRow.innerHTML=`<div class="confirm">
+                newRow.innerHTML=`<div class="table__row--confirm">
                  <div class="centered">
                     <div class="table__column _18 confirm__message">
                         <p>Are you sure you want to remove this item?</p>
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 </div>`;
                 myRow.parentNode.insertBefore(newRow,myRow.nextSibling);
             }else{
-                newRow.innerHTML=`<div class="confirm confirm--last">
+                newRow.innerHTML=`<div class="table__row--confirm table__row--last">
                  <div class="centered">
                     <div class="table__column _18 confirm__message">
                         <p>Are you sure you want to remove this item?</p>
@@ -48,13 +48,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
             myRow.classList.add('click');
 
             document.querySelector('.confirm__button--yes').addEventListener('click', () => {
-                console.log('clicked yes');
                 myRow.parentNode.removeChild(myRow);
                 newRow.parentNode.removeChild(newRow);
+                if([...myRow.classList].indexOf('table__row--last') >= 0) {
+                    document.querySelector('.table__body .table__row:last-of-type').classList.add('table__row--last');
+                }
             });
 
             document.querySelector('.confirm__button--no').addEventListener('click', () => {
-                console.log('clicked no');
                 newRow.parentNode.removeChild(newRow);
                 myRow.classList.remove('click');
             });
